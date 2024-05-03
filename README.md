@@ -5,10 +5,18 @@ The program models a PC (Personal Computer) and its components such as the CPU (
 Classes and Their Responsibilities:
 
 ConsoException: This class defines a custom exception ConsoException that is thrown when the power consumption of the PC exceeds a certain threshold (1000 watts). It extends the built-in Exception class.
+
+
 UC: Represents the central processing unit (CPU) of the PC. It contains attributes such as CPU frequency, RAM capacity, and power consumption. It also provides methods to get and set these attributes.
+
+
 Peripherique: Abstract class representing a peripheral device connected to the PC. It contains common attributes such as ID and model and defines an abstract method calculerPuissance() to calculate the power consumption of the peripheral.
+
 Clavier: Subclass of Peripherique representing a keyboard peripheral. It calculates power consumption based on the number of keys and a constant power value.
+
 Moniteur: Subclass of Peripherique representing a monitor peripheral. It calculates power consumption based on its classification, dimensions, and maximum resolution.
+
+
 PC: Represents the PC itself, composed of a CPU (UC) and an array of peripherals (Peripherique). It provides methods to calculate the total power consumption (calConsoElec()) and a constructor to initialize the PC with its components.
 Main Method:
 
